@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link href="{% static 'css/core/item_details.css' %}" rel="stylesheet" type="text/css" />
+<style>
+    .page__checkout {
+        display: flex;
+        align-items: center;
+        margin-top: 4rem !important;
+    }
+
+    .page__checkoutLeft {
+        width: 50%;
+        margin-right: 2rem !important;
+    }
+
+    .checkout {
+        width: 60%;
+    }
+
+    .checkout > h3 {
+        margin-bottom: 0.3rem !important;
+    }
+
+    .checkout > .reviews {
+        margin-bottom: 1rem !important;
+    }
+
+    .checkout > .reviews > span > i {
+        opacity: 0.5;
+    }
+
+    .checkout__price{
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .checkout__price > h5 {
+        color: peru;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+    }
+
+    .page__checkoutRight  a {
+        margin-top: 1rem !important;
+        padding: 0.5rem 1.5rem !important;
+        border: none;
+        background-color: peru;
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .checkout__image > img {
+        width: 100%;
+        height: 40vh;
+    }
+
+</style>
+{% endblock stylesheet %}
+
+
+{% block content %}
+<div class="sectionDetail">
+    <div class="sectionDetail__banner">
+        {% include 'snippets/banner.html' %}
+    </div>
+
+    <div class="page__checkout">
+        <div class="page__checkoutLeft">
+            <div class="checkout__image">
+                <img src="{% static 'img/rice.jpg' %}" class="img-responsive" alt="" />
+            </div>
+        </div>
+    
+        <div class="page__checkoutRight">
+            <div class="checkout">
+                <h3>{{ object.title }}</h3>
+                <div class="reviews">
+                    <span>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </span>
+    
+                    <span> ( There are no reviews yet )</span>
+                </div>
+
+                <p>We assure you quick deliveries to any destination in the beautiful city of Jalingo.</p>
+
+                <div class="checkout__price">
+                    <h5>N{{ object.price }}.00 <span></span></h5>
+                </div>
+
+                <br />
+                <a href="{{ object.get_add_to_cart_url }}">Add to Cart</a>
+                <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger">Remove from Cart</a>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+{% include 'snippets/footer.html' %}
+{% endblock footer %}
+

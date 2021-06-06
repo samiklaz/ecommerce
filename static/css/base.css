@@ -1,0 +1,321 @@
+* {
+   padding: 0;
+   margin: 0 !important;
+}
+
+body {
+   background-color: whitesmoke !important;
+   width: 100% !important;
+   font-size: 14px !important;
+   box-sizing: border-box !important;
+}
+
+
+.kasuwaa {
+   width: 100% !important;
+}
+.navigation{
+   background-color:whitesmoke !important;
+   padding: 0.5rem 4.5rem;
+   margin: 0 !important;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.navigation__form {
+   border-radius: 1.5rem !important;
+}
+
+.navigation__formInput {
+   display: flex;
+   align-items: center;
+   flex: 1;  
+   border-radius: 1.5rem !important;
+   width: 40vw !important;
+   background-color: #fff;
+   padding: 0.5rem 0.7rem;
+}
+
+.navigation__formInput > button {
+   display: none;
+}
+
+.navigation__formInput > input {
+   flex: 1;
+   outline: none;
+   border: none;
+   padding: 0 0.5rem;
+}
+
+.navigation__formInput > i {
+   opacity: 0.5;
+}
+
+
+.navigation__right {
+   display: flex;
+   align-items: center;
+   background-color: whitesmoke !important;
+}
+
+.navigation__right .navigation__rightInfo {
+   background-color: whitesmoke !important;
+   margin-right: 1.5rem !important;
+}
+
+.navigation__right .navigation__rightInfo > p {
+   background-color: whitesmoke !important;
+   opacity: 0.7;
+   margin-bottom: 0 !important;
+   text-transform: uppercase;
+   font-size: 0.7rem;
+}
+
+.navigation__right .navigation__rightInfo > h3 {
+   background-color: whitesmoke !important;
+   margin-bottom: 0 !important;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+.navigation__right .navigation__rightInfo > h3 > a {
+   text-decoration: none;
+   background-color: whitesmoke !important;
+   color: peru;
+}
+
+.navigation__right .navigation__rightInfo > h3 > a:hover {
+   color: rgb(214, 194, 11);
+}
+
+
+.navigation__right > p {
+   background-color: whitesmoke !important;
+}
+
+.navigation__right > a {
+   text-decoration: none;
+}
+
+.navigation__right > a > span {
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation__right > a > i {
+   font-size: 3rem;
+   color: peru;
+}
+
+.overlay {
+   background-image: linear-gradient(to bottom, rgba(58, 51, 51, 0.5), rgba(255, 255, 255, 0));
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding:0 4.5rem;
+   width: 100vw;
+   height: 70vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.overlay__categories {
+   background-color: whitesmoke;
+   padding: 0.7rem 5.5rem 0.7rem 1rem;
+   border-radius: 0.3rem;
+}
+
+.overlay__categories > p {
+   border-bottom: 1px solid peru;
+}
+
+.overlay__categories ul {
+   list-style: none;
+}
+
+.overlay__categories ul > li {
+   margin: 1rem 0 !important;
+}
+
+.overlay__categories ul li > a{
+   text-decoration: none;
+   color: black;
+   font-size: 1.1rem;
+}
+
+.overlay__categories ul li > a:hover {
+   color: peru;
+}
+
+.overlay_desc {
+   color: white;
+}
+
+.overlay_desc > h3 {
+   letter-spacing: 0.7rem;
+   font-size: 2rem;
+}
+
+.overlay_desc > h1 {
+   font-size: 3.5rem;
+   font-weight: bold;
+   letter-spacing: 0.5rem;
+   color: rgb(209, 160, 111);
+}
+
+.overlay_descButton {
+   margin-top: 2.5rem !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.overlay_descButton > a {
+   border: none;
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   padding: 0.5rem 2.5rem;
+   font-size: 1.3rem;
+   background-color: peru;
+   color: white !important;
+   font-weight: bold;
+   border-radius: 2rem;
+   text-decoration: none !important;
+}
+
+.overlay_descButton > a:hover {
+   background-color: white;
+   color: peru !important;
+   border: 1px solid peru;
+}
+
+
+.overlay__rightSectionOne {
+   background-color: whitesmoke;
+   padding: 1rem 2rem;
+   border-radius: 0.2rem;
+}
+
+.overlay__rightSectionOne > p {
+   border-bottom: 1px solid peru;
+}
+
+.overlay__rightSectionOne > ul {
+   list-style: none;
+}
+
+.overlay__rightSectionOne > ul > li {
+   margin-bottom: 1.3rem !important;
+}
+
+.overlay__rightSectionOne > ul > li a {
+   text-decoration: none;
+   color: peru;
+}
+
+.overlay__rightSectionOne > ul h3 {
+   color: black;
+   font-size: 1.3rem;
+   text-transform: uppercase;
+}
+
+.overlay__center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.overlay__center > img {
+   border-radius: 1rem;
+   width: 95%;
+   height: 90%;
+}
+
+
+.footer {
+   margin-top: 5.5rem !important;
+   width: 100vw !important;
+   background-image: linear-gradient(to bottom,rgba(17, 16, 16, 0.5), black);
+   padding: 2rem 4rem;
+   display: flex;
+   justify-content: space-between;
+   color: lightgray;
+}
+
+
+.footer__menu > ul {
+   list-style: none;
+}
+
+.footer__menu > ul > li {
+   padding: 0.3rem 0;
+   border-bottom: 1px solid rgb(114, 107, 107);
+}
+
+.footer__menu > ul > li > a {
+   color: lightgray;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-style: italic;
+}
+
+.footer__center {
+   padding: 0.5rem 0 !important;
+}
+
+.footer__center > h4 {
+   font-weight: bold;
+   font-size: 1rem;
+   text-transform: uppercase;
+   margin-bottom: 0.3rem !important;
+}
+
+.footer__center > p {
+   margin-bottom: 0.3rem !important;
+}
+
+
+.footer__right > .footer_rightItems{
+   margin: 0.7rem 0 !important;
+}
+
+.footer_rightItems > h3 {
+   font-size: 1.1rem;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+
+.footer_rightItems > p {
+   color: rgb(160, 145, 145);
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+}
+
+.footer__centerSocials {
+   margin-top: 2.5rem !important;
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__centerSocials > h5 {
+   font-size: 1rem !important;
+   margin-bottom: 0.5rem !important;
+}
+
+.footer__centerSocials > ul {
+   list-style: none;
+   display: flex;
+   margin-left: -0.5rem!important;
+}
+
+.footer__centerSocials > ul > li {
+   padding: 0 0.5rem !important;
+}
+
+.footer__centerSocials > ul > li > a > i {
+   font-size: 1.3rem;
+}

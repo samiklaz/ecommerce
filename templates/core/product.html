@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link href="{% static 'css/core/item_list.css' %}" rel="stylesheet" type="text/css" />
+{% endblock stylesheet %}
+
+
+
+{% block overlay %}
+{% include 'snippets/overlay.html' %}
+{% endblock overlay %}
+
+
+{% block content %}
+
+<div class="container-section">
+    <div class="container-sectionLinks">
+        <ul>
+            <li><a href="" class="active">Best selling Products</a></li> &nbsp; &nbsp; &nbsp; &nbsp;
+        </ul>       
+    </div>
+    <br />
+
+    {% include 'snippets/items.html' %}
+
+    
+       <div class="section-items__right">
+           <h2>Order in Bags</h2>
+
+           <div class="section-items__sidebar">
+
+               {% for item_bag in items_bags %}
+                <a href="{{ item_bag.get_absolute_url }}" class="section-items__sidebarList">
+                    <img src="{% static 'img/rice.jpg' %}" class="img-responsive product__image" alt="" />
+
+                    <div class="section-items__sidebarListDesc">
+                        <h2>{{ item_bag.title }}</h2>
+                        <span>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i> 
+                            <i class="fa fa-star"></i> 
+                            <i class="fa fa-star"></i> 
+                            <i class="fa fa-star"></i> 
+                        </span>
+                        <p>N 
+                            {% if item.discount_price %}
+                                {{ item_bag.discount_price}}.00
+                            {% else %}
+                                {{ item_bag.price}}.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+
+               {% endfor %}
+
+            <img src="{% static 'img/banner1.jpg' %}" class="img-responsive product__image" alt="" />
+
+           </div>
+       </div>
+    </div>
+
+    {% include 'snippets/banner.html' %}
+
+    <div class="section-items">
+        <div class="section-items__left">
+            {% for item in items2 %}
+             <div class="section-items__leftContainer">
+                 <div class="product">
+                 <center>
+                     <img src="{% static 'img/rice.jpg' %}" class="img-responsive product__image" alt="" />
+                 </center>
+ 
+                 <div class="product__description">
+                     <div>
+                         <h1>{{ item.title }}</h1>
+                         <p>N 
+                             {% if item.discount_price %}
+                                {{ item.discount_price }}.00
+                            {% else %}
+                                {{ item.price }}.00
+                            {% endif %}
+                            </p>
+                         <br />
+                     </div>
+ 
+                     <center><a href="{{ item.get_absolute_url }}">Order now</a></center>
+                 </div>
+                 </div>
+             </div>
+            {% endfor %}
+
+ 
+        </div>
+        <div class="section-items__right">
+            <div class="banner_2">
+                <img src="{% static 'img/banner2.jpg' %}" class="img-responsive product__image" alt="" />
+            </div>
+                <img src="{% static 'img/banner1.jpg' %}" class="img-responsive product__image" alt="" />
+            </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include 'snippets/footer.html' %}
+{% endblock footer %}
+
+

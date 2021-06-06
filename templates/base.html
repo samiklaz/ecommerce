@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/swiper.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/font.css' %}" rel="stylesheet" type="text/css" />
+    {% block stylesheet %}
+    {% endblock stylesheet %}
+    <title>
+        {% block head_title %} {% endblock head_title %}
+    </title>
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+<body>
+    {% load cart_template_tags %}
+    <nav class="navigation">
+        <img src="{% static 'img/logo.jpg' %}" class="img-responsive" />
+
+        <form class="navigation__form">
+            <div class="navigation__formInput">
+                <input type="text" placeholder="Search me" />
+                <i class="fa fa-search"></i>
+                <button>Submit</button>
+            </div>
+        </form>
+
+        <div class="navigation__right">
+            {% if request.user.is_authenticated %}
+            <div class="navigation__rightInfo">
+                <p>Hello, </p>
+                {{ request.user.username }}
+            </div>
+            {% else %}
+            <div class="navigation__rightInfo">
+                <p>Hello</p>
+                <h3><a href="{% url 'account_login' %}">LOGIN</a></h3>
+            </div>
+            {% endif %}
+            <a href="">
+                <i class="fa fa-shopping-cart"></i> <span>{{ request.user|cart_item_count }}</span>
+            </a>
+
+        </div>
+    </nav>
+
+    {% block overlay %}
+    {% endblock overlay %}
+
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" alert-dismissible fade show role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                    <span aria-hidden="true">&times</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+    {% block content %}
+    {% endblock content %}
+    
+    {% block footer %}
+    {% endblock footer %}
+
+    {% block extra_body %}
+    {% endblock extra_body %}
+
+
+
+    <script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

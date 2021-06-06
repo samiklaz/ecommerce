@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link href="{% static 'css/core/item_details.css' %}" rel="stylesheet" type="text/css" />
+{% endblock stylesheet %}
+
+
+{% block content %}
+<div class="sectionDetail">
+    <div class="sectionDetail__banner">
+        {% include 'snippets/banner.html' %}
+    </div>
+
+    {% include 'snippets/items.html' %}  
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+{% include 'snippets/footer.html' %}
+{% endblock footer %}
+

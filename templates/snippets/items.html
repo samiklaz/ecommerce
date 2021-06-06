@@ -1,0 +1,146 @@
+{% load static %}
+
+<style>
+    .section-items {
+    display: flex;
+}
+
+.section-items__left {
+    flex: 0.75;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-items__right {
+    flex: 0.25;
+}
+
+.section-items__leftContainer {
+    width: 30%;
+    height: auto;
+    background-color: white;
+    margin-bottom: 1rem;
+    border: 6px solid whitesmoke;
+    border-radius: 0.4rem;
+}
+
+
+.section-items__leftContainer > .product img {
+    width: 100%;
+    height: 30vh;
+}
+
+.product__description {
+    padding: 1rem 0 0.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.product__description > div > h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.product__description > div > p {
+    padding: 0.3rem 0;
+    color: peru;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.product__description > center >  a {
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: peru;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: 30rem !important;
+}
+
+.section-items__sidebar {
+    margin-bottom: 1rem;
+}
+
+.section-items__right > h2 {
+    margin-bottom: 1rem !important;
+    font-size: 1.2rem;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid lightgray;
+    color: peru;
+}
+
+.section-items__sidebarList {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    margin-bottom: 1rem !important;
+}
+
+.section-items__sidebarList > img {
+    width: 30%;
+    height: 4.5rem;
+}
+
+.section-items__sidebarListDesc {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.section-items__sidebarListDesc > span > i {
+    color: black;
+    opacity: 0.3;
+}
+
+.section-items__sidebarListDesc > h2 {
+    font-size: 1rem;
+    color: black;
+    opacity: 0.4;
+}
+
+.section-items__sidebarListDesc > p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: peru;
+}
+
+
+.section-items__right > .banner_2 {
+    width: 100%;
+}
+
+.section-items__right > .banner_2 > img {
+    width: 100% !important;
+}
+</style>
+
+
+
+<div class="section-items">
+    <div class="section-items__left">
+
+        {% for item in items %}
+        <div class="section-items__leftContainer">
+            <div class="product">
+             <center>
+                 <img src="{% static 'img/product.jpg' %}" class="img-responsive product__image" alt="" />
+             </center>
+
+             <div class="product__description">
+                 <div>
+                     <h1>{{ item.title }}</h1>
+                     <p>N {{ item.price }}</p>
+                     <br />
+                 </div>
+
+                 <center><a href="{{ item.get_absolute_url }}">Order now</a></center>
+             </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>

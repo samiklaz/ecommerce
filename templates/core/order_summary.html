@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link href="{% static 'css/core/item_details.css' %}" rel="stylesheet" type="text/css" />
+<style>
+.billing__section {
+    border: 1px solid whitesmoke;
+    border-top: 5px solid peru;
+    padding: 1rem;
+}
+</style>
+{% endblock stylesheet %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: white; height: 100vh; padding: 3rem !important;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="billing__section">
+                <h3>Billing Details</h3>
+                <form>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" 
+                            </div>
+                            <div class="col-md-6">dnjnfj</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">knlfdjkf</div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+{% include 'snippets/footer.html' %}
+{% endblock footer %}
+

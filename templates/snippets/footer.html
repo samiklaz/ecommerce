@@ -1,0 +1,61 @@
+{% load static %}
+
+{% block footer %}
+    <div class="footer">
+        <div class="footer__menu">
+            <img src="{% static 'img/logo.jpg' %}" class="img-responsive" />
+
+            <ul>
+                <li><a href="{% url 'core:product' %}">Home</a></li>
+                <li><a href="{% url 'about:about' %}">About us</a></li>
+                <li><a href="{% url 'about:contact' %}">Contact us</a></li>
+                <li><a href="{% url 'about:privacy' %}"">Privacy Policy</a></li>
+                <li><a href="{% url 'about:agreement' %}">Terms of Agreement</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__center">
+            <h4>New to Kasuwaa?</h4>
+            <p>Subscribe to our newsletter to get updates on our latest offers</p>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter your email" />
+                    <button type="submit" class="btn btn-primary mt-2">Subscribe</button>
+                </div>
+            </form>
+
+            <div class="footer__centerSocials">
+                <h5>Join us on</h5>
+                <ul>
+                    <li><a href=""><i class="fa fa-whatsapp" style="color: green!important"></i></a></li>
+                    <li><a href=""><i class="fa fa-facebook" style="color: blue!important"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram" style="color: purple!important"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter" style="color: lightblue!important"></i></a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__right">
+            <div class="footer_rightItems">
+                <h3>Address:</h3>
+                <p>8 Jalingo Road</p>
+            </div>
+
+            <div class="footer_rightItems">
+                <h3>Phone:</h3>
+                <p>+234</p>
+            </div>
+
+
+            <div class="footer_rightItems">
+                <h3>email:</h3>
+                <p>Kasuwaa@gmail.com</p>
+            </div>
+
+            <div class="footer_rightItems">
+                <h3>Working days/Hours:</h3>
+                <p>24 hours/7</p>
+            </div>
+        </div>
+    </div>
+    {% endblock footer %}

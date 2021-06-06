@@ -1,0 +1,12 @@
+.privacy {
+    padding: 3rem 4.5rem;
+    background-color: #fff;
+}
+
+.privacy > h3 {
+    margin-bottom: 2rem !important;
+}
+
+.privacy > p {
+    margin-bottom: 0.7rem !important;
+}

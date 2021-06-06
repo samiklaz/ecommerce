@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+<link href="{% static 'css/about/about.css' %}" rel="stylesheet" type="text/css" />
+{% endblock stylesheet %}
+
+
+{% block content %}
+<div class="about">
+    <div class="about__section">
+        <div class="about__sectionLeft">
+            <h3>About Kasuwaa</h3>
+
+            <div class="about__sectionLeftDesc">
+                <p>This is the jnsdijhd skhkjn dsjkhej ksdbjhbsd jenhsdbh nsvdhbne jiuhasuiywhj basy8uiwhijuiyahsuj cw8ydhw ujwiugh udwb</p>
+            </div>
+            <br />
+
+            <div class="about__vision">
+                <h3>Our vision</h3>
+                <p>{{object.vision}}</p>
+            </div> <br />
+
+            <div class="about__mission">
+                <h3>Our Mission</h3>
+                <p>{{object.mission}}</p>
+            </div>
+        </div>
+
+        <div class="about__sectionRight">
+            <h3>Clients Review</h3>
+
+            <div class="client__reviews">
+                <div>
+                    <img src="{% static 'img/about/avatar.jpg' %}" class="img img-responsive" alt="" />
+                    <div class="client__reviewsInfo">
+                        <div class="client__reviewsInfoUser">
+                            <h4>Eniobor James</h4>
+                            <p>CEO, xycinews - Best leak and review blogger</p>
+                        </div>
+                    </div>
+                </div>
+                <blockquote><span>''</span>Here we go</blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+{% include 'snippets/footer.html' %}
+{% endblock footer %}
+
